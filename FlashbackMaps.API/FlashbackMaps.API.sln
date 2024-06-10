@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlashbackMaps.API", "FlashbackMaps.API\FlashbackMaps.API.csproj", "{022C262B-10C9-4A9F-9B24-976185A001DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlashbackMaps.Application", "FlashbackMaps.Application\FlashbackMaps.Application.csproj", "{CF4FA23D-ABCE-4FA5-916B-4C40AFAF743C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlashbackMaps.Data", "FlashbackMaps.Data\FlashbackMaps.Data.csproj", "{B6D3626C-8783-4EE1-9887-E4F324B66A8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlashbackMaps.Domain", "FlashbackMaps.Domain\FlashbackMaps.Domain.csproj", "{0B2D1282-3927-4D52-B157-748D3F246BB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlashbackMaps.UnitTests", "FlashbackMaps.UnitTests\FlashbackMaps.UnitTests.csproj", "{37E18624-5DB0-4392-B468-9916F12E4BBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlashbackMaps.IntegrationTests", "FlashbackMaps.IntegrationTests\FlashbackMaps.IntegrationTests.csproj", "{6871A116-3B4A-4928-827F-01F7F5D6485F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{022C262B-10C9-4A9F-9B24-976185A001DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022C262B-10C9-4A9F-9B24-976185A001DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022C262B-10C9-4A9F-9B24-976185A001DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022C262B-10C9-4A9F-9B24-976185A001DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF4FA23D-ABCE-4FA5-916B-4C40AFAF743C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF4FA23D-ABCE-4FA5-916B-4C40AFAF743C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF4FA23D-ABCE-4FA5-916B-4C40AFAF743C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF4FA23D-ABCE-4FA5-916B-4C40AFAF743C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6D3626C-8783-4EE1-9887-E4F324B66A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D3626C-8783-4EE1-9887-E4F324B66A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D3626C-8783-4EE1-9887-E4F324B66A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D3626C-8783-4EE1-9887-E4F324B66A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B2D1282-3927-4D52-B157-748D3F246BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B2D1282-3927-4D52-B157-748D3F246BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B2D1282-3927-4D52-B157-748D3F246BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B2D1282-3927-4D52-B157-748D3F246BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37E18624-5DB0-4392-B468-9916F12E4BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E18624-5DB0-4392-B468-9916F12E4BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E18624-5DB0-4392-B468-9916F12E4BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E18624-5DB0-4392-B468-9916F12E4BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6871A116-3B4A-4928-827F-01F7F5D6485F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6871A116-3B4A-4928-827F-01F7F5D6485F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6871A116-3B4A-4928-827F-01F7F5D6485F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6871A116-3B4A-4928-827F-01F7F5D6485F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36136D30-2405-4CBC-9784-C15151740F1C}
+	EndGlobalSection
+EndGlobal
