@@ -1,6 +1,7 @@
 using FlashbackMaps.Application.Service;
 using FlashbackMaps.Data;
 using FlashbackMaps.Data.Repositories;
+using FlashbackMaps.Data.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,8 +16,10 @@ builder.Services.AddSwaggerGen();
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMemoryDb"));
 builder.Services.AddScoped<ILocationRepository, LocationRepository>();
+builder.Services.AddScoped<IImageRepository, ImageRepository>();
 
 builder.Services.AddScoped<ILocationsService, LocationsService>();
+builder.Services.AddScoped<IImageService, ImageService>();
 
 var app = builder.Build();
 

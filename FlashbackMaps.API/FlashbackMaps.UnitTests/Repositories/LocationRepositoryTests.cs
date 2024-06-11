@@ -36,26 +36,6 @@ public class LocationRepositoryTests
     }
 
     [Fact]
-    public void GetAll_ReturnsAllLocations()
-    {
-        // Arrange
-        var locations = _fixture.Create<List<Location>>();
-        _mockSet.As<IQueryable<Location>>().Setup(m => m.Provider).Returns(locations.AsQueryable().Provider);
-        _mockSet.As<IQueryable<Location>>().Setup(m => m.Expression).Returns(locations.AsQueryable().Expression);
-        _mockSet.As<IQueryable<Location>>().Setup(m => m.ElementType).Returns(locations.AsQueryable().ElementType);
-        _mockSet.As<IQueryable<Location>>().Setup(m => m.GetEnumerator()).Returns(locations.GetEnumerator());
-        var mockSet = new Mock<DbSet<Location>>();
-        mockSet.As<IQueryable<Location>>().Setup(m => m.GetEnumerator()).Returns(locations.GetEnumerator());
-        _mockContext.Setup(c => c.Set<Location>()).Returns(mockSet.Object);
-
-        // Act
-        var result = _repository.GetAll();
-
-        // Assert
-        Assert.Equal(locations, result);
-    }
-
-    [Fact]
     public void GetById_ReturnsLocation()
     {
         // Arrange

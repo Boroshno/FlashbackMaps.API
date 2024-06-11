@@ -10,6 +10,7 @@ namespace FlashbackMaps.Data
         }
 
         public DbSet<Location> Locations { get; set; }
+        public DbSet<Image> Images { get; set; }
     }
 
 }
