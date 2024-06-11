@@ -61,4 +61,17 @@ public class LocationsControllerTests
         // Assert
         _mockLocationsService.Verify(service => service.AddLocation(location), Times.Once);
     }
+
+    [Fact]
+    public void Delete_RemovesLocation()
+    {
+        // Arrange
+        var locationId = 1;
+
+        // Act
+        _controller.Delete(locationId);
+
+        // Assert
+        _mockLocationsService.Verify(service => service.DeleteLocation(locationId), Times.Once);
+    }
 }

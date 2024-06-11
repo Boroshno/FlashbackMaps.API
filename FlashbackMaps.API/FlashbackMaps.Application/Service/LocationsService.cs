@@ -25,5 +25,10 @@ namespace FlashbackMaps.Application.Service
         {
             return _locationRepository.GetById(id);
         }
+
+        public void DeleteLocation(long id)
+        {
+            _locationRepository.Delete(id);
+        }
     }
 }

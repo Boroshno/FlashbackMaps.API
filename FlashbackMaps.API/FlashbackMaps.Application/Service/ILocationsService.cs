@@ -8,5 +8,6 @@ namespace FlashbackMaps.Application.Service
         IEnumerable<Location> GetLocations();
         Location GetLocations(long id);
         void AddLocation(Location location);
+        void DeleteLocation(long id);
     }
 }

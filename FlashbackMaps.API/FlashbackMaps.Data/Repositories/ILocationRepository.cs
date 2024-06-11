@@ -9,5 +9,6 @@ namespace FlashbackMaps.Data.Repositories
         IEnumerable<Location> GetAll();
         Location GetById(long id);
         Location Add(Location location);
+        Location Delete(long id);
     }
 }

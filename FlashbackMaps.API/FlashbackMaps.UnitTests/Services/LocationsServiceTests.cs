@@ -57,4 +57,17 @@ public class LocationsServiceTests
         // Assert
         Assert.Equal(location, result);
     }
+
+    [Fact]
+    public void DeleteLocation_CallsRepository()
+    {
+        // Arrange
+        var locationId = 1;
+
+        // Act
+        _service.DeleteLocation(locationId);
+
+        // Assert
+        _mockLocationRepository.Verify(repo => repo.Delete(locationId), Times.Once);
+    }
 }

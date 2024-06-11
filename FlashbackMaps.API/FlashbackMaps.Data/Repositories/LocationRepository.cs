@@ -27,6 +27,19 @@ namespace FlashbackMaps.Data.Repositories
             _context.SaveChanges();
             return location;
         }
+
+        public Location Delete(long id)
+        {
+            var location = _context.Set<Location>().Find(id);
+            if (location == null)
+            {
+                return null;
+            }
+
+            _context.Set<Location>().Remove(location);
+            _context.SaveChanges();
+            return location;
+        }
     }
 
 }

@@ -34,5 +34,11 @@ namespace FlashbackMaps.API.Controllers
         {
             _locationsService.AddLocation(location);
         }
+
+        [HttpDelete("{id}")]
+        public void Delete(long id)
+        {
+            _locationsService.DeleteLocation(id);
+        }
     }
 }

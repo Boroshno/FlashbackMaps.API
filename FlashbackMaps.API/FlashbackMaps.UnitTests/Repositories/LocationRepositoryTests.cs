@@ -44,6 +44,9 @@ public class LocationRepositoryTests
         _mockSet.As<IQueryable<Location>>().Setup(m => m.Expression).Returns(locations.AsQueryable().Expression);
         _mockSet.As<IQueryable<Location>>().Setup(m => m.ElementType).Returns(locations.AsQueryable().ElementType);
         _mockSet.As<IQueryable<Location>>().Setup(m => m.GetEnumerator()).Returns(locations.GetEnumerator());
+        var mockSet = new Mock<DbSet<Location>>();
+        mockSet.As<IQueryable<Location>>().Setup(m => m.GetEnumerator()).Returns(locations.GetEnumerator());
+        _mockContext.Setup(c => c.Set<Location>()).Returns(mockSet.Object);
 
         // Act
         var result = _repository.GetAll();
@@ -64,5 +67,24 @@ public class LocationRepositoryTests
 
         // Assert
         Assert.Equal(location, result);
+    }
+
+    [Fact]
+    public void Delete_CallsContext()
+    {
+        // Arrange
+        var location = _fixture.Create<Location>();
+        var locationId = 1; // Specify the ID of the location to be deleted
+        location.Id = locationId; // Set the ID of the location object
+
+        _mockSet.Setup(m => m.Find(It.IsAny<long>())).Returns(location);
+        // Set up the mockSet to return the location object when Find method is called with the specified ID
+
+        // Act
+        _repository.Delete(locationId); // Pass the ID to the Delete method
+
+        // Assert
+        _mockSet.Verify(m => m.Remove(location), Times.Once);
+        _mockContext.Verify(m => m.SaveChanges(), Times.Once);
     }
 }
